@@ -7,6 +7,9 @@
     <title data-i18n="page.title">Japan Life Guide</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
 </head>
 
 <body>
@@ -35,16 +38,13 @@
         </div>
     </header>
     <main>
-        <section>
-            <h2 data-i18n="welcome.title">ようこそ！</h2>
-            <p data-i18n="welcome.description1">このウェブサイトは、日本に長期滞在する外国人のために、日本の基本的なルールや手続きについての情報を提供します。</p>
-            <p data-i18n="welcome.description2">各ページでは、必要な手続きや情報を詳しく説明していますので、ぜひご覧ください。</p>
-        </section>
+        <div id="p5-canvas" class="canvas-container"></div>
     </main>
     <footer>
         <p data-i18n="footer.copyright">&copy; 2025 日本生活ガイド</p>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/sketch.js"></script>
 </body>
 
 </html>

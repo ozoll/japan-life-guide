@@ -13,8 +13,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
+    background-color: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(222, 226, 230, 0.5);
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -74,8 +75,9 @@ main {
 
 /* フッタースタイル */
 footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid #dee2e6;
+    background-color: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(222, 226, 230, 0.5);
     padding: 1rem 2rem;
     text-align: center;
     margin-top: auto;
