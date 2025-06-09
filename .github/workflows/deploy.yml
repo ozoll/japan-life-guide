@@ -21,4 +21,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "src/*"
           target: "/var/www/html"
+          strip_components: 1
           rm: true
