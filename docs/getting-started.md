@@ -1,111 +1,138 @@
-# プロジェクトの開始方法
+# 🚀 Japan Life Guide - 開発環境セットアップガイド
 
-このプロジェクトで開発を始めるには、以下の手順に従ってください：
+## 🔧 開発環境の準備
 
-## 1. 前提条件
-開発を始める前に、以下がインストールされていることを確認してください：
-- Git
-- VS Code またはお好みのテキストエディタ
+### 📦 必要なソフトウェア
 
-## 2. GitHubアカウントを作成
-- [GitHub](https://github.com)にアクセスしてアカウントを登録します
+| ソフトウェア | 用途 | 必須度 |
+|-------------|------|--------|
+| **Git** | バージョン管理 | ✅ 必須 |
+| **GitHub アカウント** | コード共有 | ✅ 必須 |
+| **VS Code** | コードエディタ | 🔥 推奨 |
 
-## 3. Gitの設定
+---
 
-### ユーザー情報の設定：
+### 1️⃣ 前提条件とセットアップ
+
+#### 🔗 Gitのインストール
+
+開発を始める前に、Gitをインストールする必要があります。以下の手順に従ってGitをインストールしてください：
+
+1. [Git公式サイト](https://git-scm.com/download/win)にアクセスします
+2. 「Download for Windows」ボタンをクリックしてインストーラーをダウンロードします
+3. ダウンロードしたインストーラー（.exe）を実行します
+4. インストールウィザードが開始されます。基本的にデフォルト設定のままで問題ありません
+   - Adjusting your PATH environment: 「Git from the command line and also from 3rd-party software」を選択
+   - その他の設定もデフォルトのままで進めます
+
+**インストール確認：**
+
+```bash
+git --version
+```
+
+バージョン情報が表示されれば、インストール完了です。
+
+#### 🌐 GitHubアカウントの作成
+
+[GitHub](https://github.com)にアクセスしてアカウントを登録します。
+
+### 2️⃣ Gitの設定
+
+#### ユーザー情報の設定
+
 ```bash
 git config --global user.name "あなたの名前"
 git config --global user.email "あなたのメールアドレス"
 ```
 
-### GitHub接続の設定（以下のいずれかを選択）：
+#### GitHub接続の設定
 
-**方法A: SSH キーを使用（推奨）**
+#### 🔐 方法A: SSH キーを使用（推奨）
+
 ```bash
 # SSH キーを生成
 ssh-keygen -t ed25519 -C "あなたのメールアドレス"
 
-# SSH キーをクリップボードにコピー
+# SSH キーをクリップボードにコピー（macOS）
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# SSH キーをクリップボードにコピー（Windows）
 clip < ~/.ssh/id_ed25519.pub
 ```
+
 - GitHubの設定 > SSH and GPG keys でSSHキーを追加
 
-**方法B: ユーザー名・パスワード認証**
+#### 🔑 方法B: ユーザー名・パスワード認証
+
 - クローン時にGitHubのユーザー名とパスワード（またはPersonal Access Token）を入力
 
-## 4. プロジェクトをフォーク
-- このリポジトリページの右上にある「Fork」ボタンをクリックします
+### 3️⃣ プロジェクトの取得
 
-## 5. フォークしたプロジェクトをクローン
+#### Step 1: フォーク
+
+このリポジトリページの右上にある「**Fork**」ボタンをクリックします
+
+#### Step 2: クローン
+
 ```bash
-git clone https://github.com/あなたのユーザー名/japan-life-guide.git
-cd japan-life-guide
+git clone https://github.com/[あなたのユーザー名]/japan-life-guide.git
 ```
 
-## 6. VS Codeでプロジェクトを開く
+#### Step 3: プロジェクトを開く
+
 ```bash
+cd japan-life-guide
 code .
 ```
 
-## 7. VS Code拡張機能のインストール
+---
 
-効率的な開発のために、以下の拡張機能をインストールすることを強く推奨します：
+## 🛠️ 開発ツールの設定
 
-### 必須拡張機能
+### 1️⃣ VS Code拡張機能のインストール
 
-1. **Live Server** - ローカル開発サーバー
-   - 拡張機能ID: `ritwickdey.LiveServer`
-   - HTMLファイルをリアルタイムでブラウザプレビュー
+このプロジェクトでは、効率的な開発のために推奨拡張機能を事前に設定しています。
 
-2. **Prettier** - コードフォーマッター
-   - 拡張機能ID: `esbenp.prettier-vscode`
-   - HTML/CSS/JSの自動フォーマット
+#### 自動インストール（推奨）
 
-3. **Auto Rename Tag** - HTMLタグの自動更新
-   - 拡張機能ID: `formulahendry.auto-rename-tag`
-   - 開始タグを変更すると終了タグも自動更新
+プロジェクトを VS Code で開くと、[推奨拡張機能](../.vscode/extensions.json)のインストールを促すポップアップが表示されます
 
-### 推奨拡張機能
+ポップアップが表示されたら「**Install All**」をクリックして一括インストールしてください。
 
-4. **HTML CSS Support** - CSSクラス名補完
-   - 拡張機能ID: `ecmel.vscode-html-css`
+#### 手動インストール
 
-5. **CSS Peek** - CSS定義の確認
-   - 拡張機能ID: `pranaygp.vscode-css-peek`
+拡張機能のポップアップが表示されない場合は、以下の拡張機能を手動でインストールしてください：
 
-6. **GitLens** - Git履歴の可視化
-   - 拡張機能ID: `eamodio.gitlens`
+| 拡張機能 | ID | 用途 |
+|---------|-----|------|
+| **Live Server** | `ritwickdey.liveserver` | 開発サーバー |
+| **Prettier** | `esbenp.prettier-vscode` | コードフォーマッター |
+| **GitHub Copilot** | `github.copilot` | AI支援 |
+| **Markdown Lint** | `davidanson.vscode-markdownlint` | Markdownチェック |
 
-### インストール方法
-1. VS Codeの拡張機能タブ（Ctrl/Cmd + Shift + X）を開く
-2. 上記の拡張機能IDを検索してインストール
-3. または、コマンドパレット（Ctrl/Cmd + Shift + P）で以下を実行：
-   ```
-   ext install ritwickdey.LiveServer
-   ext install esbenp.prettier-vscode
-   ext install formulahendry.auto-rename-tag
-   ```
+### 2️⃣ 開発サーバーの起動
 
-## 8. 新しいブランチを作成して作業
-```bash
-git checkout -b feature/あなたの機能名
-```
+VS Codeで `src/index.html` を開き、右下の「**Go Live**」ボタンをクリックするか、ファイルを右クリックして「**Open with Live Server**」を選択します。
 
-## 9. 変更をコミット
-```bash
-git add .
-git commit -m "変更内容の説明"
-git push origin feature/あなたの機能名
-```
+🎉 **開発を始める準備が整いました！**
 
-## 10. プルリクエストを作成
-- GitHubで元のリポジトリに対してプルリクエストを送信します
+---
 
-開発を始める準備が整いました！
+## 🎯 次のステップ
 
-## 次のステップ
+### 📖 開発を始める前に
 
 初期設定が完了したら、以下のドキュメントを参照して開発を進めてください：
 
-- 🔄 **[開発ワークフローガイド](development-workflow.md)** - 日常の開発手順
-- 🛠️ **[開発環境セットアップ](development-environment.md)** - より詳細な環境設定
+### 📚 関連ドキュメント
+
+- 🏠 **[プロジェクト概要](../README.md)**
+- 🔄 **[開発ワークフローガイド](workflow.md)** - 日常の開発手順
+
+### 🚀 開発のヒント
+
+- **Live Server**を使用してリアルタイムプレビューを活用
+- **Prettier**でコードフォーマットを統一
+- **Git**でこまめにコミットを行う
+- **Issues**で問題や改善提案を管理
