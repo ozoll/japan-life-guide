@@ -39,7 +39,7 @@ Japan Life Guideは、日本で新生活を始める外国人の方々を支援�
 
 ## 📁 プロジェクト構造
 
-```cmd
+```text
 japan-life-guide/
 ├── 📁 src/                    # メインソースコード
 │   ├── index.html             # ホームページ
@@ -64,7 +64,16 @@ japan-life-guide/
 
 ## 🚀 開発を始める
 
-**既にGitとGithubが設定済みの場合：**
+### 🔰 初めての方へ
+
+**Git/GitHub初心者の方**は、詳細なセットアップ手順をご確認ください：
+
+- 📖 **[プロジェクト開始ガイド](docs/getting-started.md)** - VS Code、Git、GitHub の設定から始める
+- 🔄 **[開発ワークフローガイド](docs/workflow.md)** - Fork-based開発の日常的な作業手順
+
+### ⚡ 経験者向けクイックスタート
+
+**既にGitとGitHubが設定済みの場合：**
 
 ```bash
 # 1. プロジェクトをフォーク（GitHubのWebページで）
@@ -75,6 +84,7 @@ code .
 # 3. Live Serverで起動（VS Code拡張機能）
 ```
 
-プロジェクトの詳細なセットアップ手順については、[📖 プロジェクト開始ガイド](docs/getting-started.md)をご覧ください。
+### 💡 サポート
 
-💡 **問題が発生した場合は、[Issues](../../issues)で質問や報告をお気軽にどうぞ！**
+- 🐛 **バグ報告・機能提案**: [Issues](https://github.com/kanghouchao/japan-life-guide/issues)
+- ❓ **質問・相談**: [Issues](https://github.com/kanghouchao/japan-life-guide/issues)またはPRコメントでお気軽に！
