@@ -42,8 +42,8 @@ japan-life-guide/
 
 **[GitHub Wiki](https://github.com/kanghouchao/japan-life-guide/wiki)** で環境設定から開発フローまで詳しく説明しています：
 
-- 🚀 **[Getting Started](https://github.com/kanghouchao/japan-life-guide/wiki/Getting-Started)** - 開発環境のセットアップ
-- 🔄 **[Workflow](https://github.com/kanghouchao/japan-life-guide/wiki/Workflow)** - 開発ワークフローと貢献手順
+- 🚀 **[Getting Started](https://github.com/kanghouchao/japan-life-guide/wiki/Development-Environment-Setup)** - 開発環境のセットアップ
+- 🔄 **[Workflow](https://github.com/kanghouchao/japan-life-guide/wiki/Development-Workflow-Guide)** - 開発ワークフローと貢献手順
 
 ### 💡 サポート
 
